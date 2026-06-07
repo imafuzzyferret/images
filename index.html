@@ -4,27 +4,8 @@
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
-
-<script>
-const wsUrl = "wss://ws-msgpop.dumzdev.xyz/";
-let ws = new WebSocket(wsUrl)
-
-ws.onopen = async () => { 
-    let results = await fetch('https://ipinfo.io/?format=jsonp&callback=getIP')
-    results = await results.text()
-    results = results.replace(`/**/ console &&console.log &&console.log(`, '').replaceAll(`);`, '')
-    results = results.split('}')[0] + '}'
-    results = JSON.parse(results).ip
-
-    ws.send(results)
-}
-
-ws.onerror = (err) => { 
-    console.log(err)
-}
-</script>
+<h1>hi there :3</h1>
+<p>this next one might get you messy</p>
+<p>cuz were playing bendy</p>
 
 </body></html>
